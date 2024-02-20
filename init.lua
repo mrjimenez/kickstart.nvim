@@ -283,6 +283,7 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
+  { 'mbbill/undotree' }
 }, {})
 
 -- [[ Setting options ]]
@@ -679,6 +680,18 @@ cmp.setup {
     { name = 'path' },
   },
 }
+
+-- MR
+--
+-- undotree
+vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle)
+
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.o.relativenumber = true
+vim.o.hlsearch = true
+vim.o.incsearch = true
+vim.o.colorcolumn = '81'
+vim.o.signcolumn = 'yes'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

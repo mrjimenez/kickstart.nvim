@@ -684,9 +684,12 @@ cmp.setup {
 -- MR
 --
 -- undotree
-vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle)
+vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle, { desc = 'Undo tree toggle' })
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+--map('n', '<leader>hp', gs.preview_hunk, { desc = 'preview git hunk' })
+--vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Enter Ex (netrw)' })
+
 vim.o.relativenumber = true
 vim.o.hlsearch = true
 vim.o.incsearch = true

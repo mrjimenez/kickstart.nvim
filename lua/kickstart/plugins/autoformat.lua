@@ -49,6 +49,11 @@ return {
         if client.name == 'tsserver' then
           return
         end
+        -- Disable code formatting for Lua by default.
+        --print(client.name)
+        if client.name == 'lua_ls' then
+          format_is_enabled = false
+        end
 
         -- Create an autocmd that will run *before* we save the buffer.
         --  Run the formatting command for the LSP that has just attached.

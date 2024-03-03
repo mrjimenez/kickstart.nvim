@@ -817,5 +817,14 @@ require('lazy').setup {
   -- { import = 'custom.plugins' },
 }
 
+-- MR
+--
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.o.relativenumber = true
+vim.o.hlsearch = true
+vim.o.incsearch = true
+vim.o.colorcolumn = '81'
+vim.o.signcolumn = 'yes'
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

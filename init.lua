@@ -815,10 +815,14 @@ require('lazy').setup {
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   -- { import = 'custom.plugins' },
+  { 'mbbill/undotree' },
 }
 
 -- MR
 --
+-- undotree
+vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle)
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.o.relativenumber = true
 vim.o.hlsearch = true

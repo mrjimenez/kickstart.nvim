@@ -829,6 +829,8 @@ vim.o.hlsearch = true
 vim.o.incsearch = true
 vim.o.colorcolumn = '81'
 vim.o.signcolumn = 'yes'
+-- Enable the column number in the ruler.
+vim.opt_global.ruler = false
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
